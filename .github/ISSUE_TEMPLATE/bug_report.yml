@@ -1,0 +1,59 @@
+name: 问题提交
+description: 提交问题报告
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        在反馈你所遇到的问题前，请再三确认相关问题是否在其他表单中提到过
+
+  - type: checkboxes
+    attributes:
+      label: 自我检查表
+      description: |
+        在浏览并填写其他选项之前, 请先勾选以下的框
+      options:
+        - label: 我已经浏览过所有的Issue，包括已经关闭的, 并确保汇报的不是已知问题
+          required: true
+        - label: 我勾选了所有框, 因为我根本就没仔细看他们是什么
+          required: false
+        - label: 我使用的是最新**稳定**版本
+          required: false
+        - label: 我使用的是最新**测试**版本
+          required: false
+  
+  - type: textarea
+    attributes:
+      label: 问题描述
+      description: 清晰简洁地描述所观察到的行为
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 所期望的行为
+      description: 清晰简洁地描述您预期发生的情况
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 如何复现
+      description: 简单描述复现此问题的步骤
+    validations:
+      required: true
+
+   - type: textarea
+      attributes:
+        label: 使用版本
+        description: 在此粘贴你的当前版本
+      validations:
+        required: true
+
+  - type: input
+    attributes:
+      label: 运行日志 (如存在)
+      description: 请上传完整的报错信息或完整日志到 https://gist.github.com , 并将链接粘贴在此处。
+      
